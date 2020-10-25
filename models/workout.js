@@ -8,36 +8,7 @@ const workoutSchema = new Schema(
     default: Date.now
   },
 
-  exercise: [
-      {
-        type: {
-            type: String,
-            trim: true,
-            required: 'Enter type of exercise'
-        },
-        name: {
-            type: String,
-            trim: true,
-            required: 'Enter the name of exercise'
-        },
-        duration: {
-            type: Number,
-            required: 'Enter exercise duration (minutes)'
-        },
-        weight: {
-            type: Number,
-        },
-        reps: {
-            type: Number,
-        },
-        sets: {
-            type: Number,
-        },
-        distance: {
-            type: Number
-        }
-    }
-    ]
+  exercises:  Array
 },
 {
     toJSON: {
